@@ -14,7 +14,7 @@ module.exports = {
         test: /\.vue$/,
         loader: "vue-loader",
         options: {
-          "sass": "vue-style-loader!css-loader!sass-loader!indentedSyntax"
+          "sass": "vue-style-loader!css-loader!sass-loader!"
         }
       },
       {
@@ -33,7 +33,12 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ ".js", ".json", ".vue" ]
+    extensions: [ ".js", ".json", ".vue" ],
+    alias: {
+      // 'vue$': 'vue/dist/vue.js',
+      echarts: path.resolve(__dirname, '../node_modules/echarts'),
+      ECharts: path.resolve(__dirname, '../node_modules/vue-echarts/components/ECharts')
+    }
   },
   devServer: {
     contentBase: path.join(__dirname, "../dist"),

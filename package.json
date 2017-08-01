@@ -26,6 +26,7 @@
     "lodash": "^4.17.4",
     "throttle-debounce": "^1.0.1",
     "vue": "^2.4.2",
+    "vue-echarts": "^2.4.0",
     "vue-router": "^2.7.0"
   },
   "devDependencies": {

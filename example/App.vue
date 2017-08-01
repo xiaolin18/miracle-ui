@@ -4,16 +4,28 @@
       <ul class="menu-left">
         <router-link to="/breadcrumb" tag="li">Breadcrumb</router-link>
         <router-link to="/button" tag="li">Button</router-link>
+        <router-link to="/linechart" tag="li">linechart</router-link>
       </ul>
     </nav>
+    <div>
+      <!-- <line-chart></line-chart> -->
+    </div>
     <main class="main">
       <router-view></router-view>
     </main>
   </div>
 </template>
 <script>
-  export default {
+  import LineChart from "./linechart";
 
+  export default {
+    components: {
+      LineChart
+    },
+    data() {
+      return {
+      }
+    }
   }
 </script>
 <style>

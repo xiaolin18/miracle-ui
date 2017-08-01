@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+logs/*
+npm-debug.log
+.idea
+*.iml
+yarn-error.log
+.happypack
+webpack_cache
+*.pid
+selenium-debug.log
+test/e2e/reports
