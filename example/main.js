@@ -1,12 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Miracle from "../src/";
+import Echarts from "vue-echarts";
 import echarts from "echarts";
 import 'echarts/lib/chart/line';
 import 'echarts/lib/component/tooltip'
 // import Miracle from "../dist/miracle/miracle";
 import App from "./App";
-import Echarts from "vue-echarts";
 import Breadcrumb from "./Breadcrumb";
 import Linechart from "./linechart";
 import Button from "./Button";

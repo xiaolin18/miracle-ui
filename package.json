@@ -6,7 +6,7 @@
   "scripts": {
     "build:src": "webpack --config ./build/webpack.src.config.js --progress --profile",
     "build:demo": "webpack --config ./build/webpack.demo.config.js --progress --profile",
-    "build:hot": "webpack-dev-server --config ./build/webpack.demo.config.js --open --hot"
+    "build:hot": "webpack-dev-server --config ./build/webpack.demo.config.js --open --hot --port 9000"
   },
   "repository": {
     "type": "git",

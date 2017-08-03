@@ -29,6 +29,22 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ["style-loader", "css-loader", "stylus-loader"]
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: '[name].[ext]?[hash]'
+        }
+      },
+      {
+        test: /\.(woff2?|eot|woff|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: '[name].[ext]?[hash:7]'
+        }
       }
     ]
   },
@@ -40,8 +56,12 @@ module.exports = {
       ECharts: path.resolve(__dirname, '../node_modules/vue-echarts/components/ECharts')
     }
   },
-  devServer: {
-    contentBase: path.join(__dirname, "../dist"),
-    port: 9000
-  }
+  plugins: [
+    new HtmlWebpackPlugin({
+        inject: true,
+        filename: path.join(__dirname, '../example/dist/index.html'),
+        template: path.join(__dirname, '../example/index.html')
+    }),
+    new FriendlyErrorsPlugin()
+  ]
 }

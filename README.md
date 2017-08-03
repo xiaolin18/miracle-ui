@@ -16,7 +16,7 @@ Miracle UI
   - webpack学习地址：https://doc.webpack-china.org/configuration/
 
 ## 学习总结
-  -  
+  - 注意路由处的语法，页面出不来的原因是因为使用了es6语法编译，但是require并不属于es6;
 
 ## 错误汇总
   1. 启动报错
